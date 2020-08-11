@@ -12,8 +12,7 @@
     "build:flow": "cp flow-template dist/index.cjs.js.flow && cp flow-template dist/index.esm.js.flow",
     "build:source": "rollup -c",
     "build": "del dist && mkdir dist && yarn build:flow && yarn build:source",
-    "start": "rollup -c -w",
-    "prepare": "yarn run build"
+    "start": "rollup -c -w"
   },
   "license": "MIT",
   "author": "Jalal Azimi <jalalazimi@gmail.com> (https://github.com/jalalazimi/)",
