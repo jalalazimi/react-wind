@@ -1,10 +1,9 @@
 {
   "name": "react-wind",
   "version": "1.0.0",
-  "description": "",
+  "description": "react-wind winds around your elements!",
   "scripts": {
     "flow": "flow check --max-warnings=0 src && flow check website",
-    "precommit": "lint-staged",
     "prettier": "prettier --write '**/*.{js,json,css}'",
     "linc": "lint-staged",
     "lint": "eslint '**/*.js'",
@@ -53,13 +52,7 @@
     "src/*.js"
   ],
   "sideEffects": false,
-  "lint-staged": {
-    "{src}/**/*.{js,json,css}": [
-      "prettier --write",
-      "git add"
-    ],
-    "**/*.js": "eslint --max-warnings 0"
-  },
+
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0"
@@ -70,6 +63,7 @@
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-flow": "^7.0.0",
+    "@testing-library/react": "^10.4.8",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^9.0.0",
     "babel-plugin-annotate-pure-calls": "^0.3.0",
@@ -102,5 +96,8 @@
     "rollup-plugin-node-resolve": "^4.0.1",
     "rollup-plugin-replace": "^2.2.0",
     "rollup-plugin-terser": "^5.1.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6"
   }
 }
